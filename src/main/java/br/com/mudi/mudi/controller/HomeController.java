@@ -19,6 +19,6 @@ public class HomeController {
     public String home(Model model){
        List<Pedido> pedidos =  pedidoRepository.findAll();
        model.addAttribute("pedidos", pedidos);
-    return "Home";
+    return "home";
     }
 }
