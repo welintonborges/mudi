@@ -1,6 +1,7 @@
 package br.com.mudi.mudi.dto;
 
 import br.com.mudi.mudi.model.Pedido;
+import br.com.mudi.mudi.model.StatusPedido;
 
 import javax.validation.constraints.NotBlank;
 
@@ -13,6 +14,7 @@ public class RequisicaoNovoPedido {
     @NotBlank
     private String urlImagem;
     private String descricao;
+
 
     public String getNomeProduto() {
         return nomeProduto;
@@ -52,6 +54,7 @@ public class RequisicaoNovoPedido {
         pedido.setNomeProduto(nomeProduto);
         pedido.setUrlProduto(urlProduto);
         pedido.setUrlImagem(urlImagem);
+        pedido.setStatus(StatusPedido.AGUARDANDO);
         return pedido;
     }
 }
