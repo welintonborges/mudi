@@ -2,12 +2,17 @@ package br.com.mudi.mudi.dto;
 
 import br.com.mudi.mudi.model.Pedido;
 
+import javax.validation.constraints.NotBlank;
+
 public class RequisicaoNovoPedido {
 
-   private String nomeProduto;
-   private String urlProduto;
-   private String urlImagem;
-   private String descricao;
+    @NotBlank
+    private String nomeProduto;
+    @NotBlank
+    private String urlProduto;
+    @NotBlank
+    private String urlImagem;
+    private String descricao;
 
     public String getNomeProduto() {
         return nomeProduto;
